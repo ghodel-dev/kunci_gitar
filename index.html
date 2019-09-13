@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME - Kumpulan Kunci Gitar</title>  
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<!--<script src="js/dbkunci.js"></script>-->
+	<script src="js/komplit.js"></script>
+	<script>var message="Kunci Gitar Indonesia";</script>
+	<script type="text/javascript" src="js/head.min.js"></script>
+    <script>head.load("js/neon.js");</script>
+
+	<script>
+
+$(document).ready(function(){
+
+				sessionStorage.setItem("refpage", "kosong"); 
+
+
+var isibook = '';
+for(var i=0, len=localStorage.length; i<len; i++) {
+    var key = localStorage.key(i);
+    var value = localStorage[key];
+	if(key.match(/cccc/)) {
+	var key = key.replace(/cccc/i, '');
+    var isibook = isibook +  "<a href=\"chord.html#"+ key +"\"><h4>"+value+"</h4></a>"; }
+
+}
+
+if(isibook == '') {
+$('#mybookmarkchord').append('<center>How to bookmark?<br>Just click this icon<br><span style="font-size:50px;color:silver"><img style="width:32px;" src="bm1.png"></span><br>on chord area.</center>');}
+else {
+$('#mybookmarkchord').append(isibook); }
+	 
+
+
+	 
+var url = 'http://kuncilagu.s3.amazonaws.com/com.chordguitar/Home_001d.txt';
+$.get(url, function(data) {
+if(data.indexOf("Request") > -1) { 
+$('#promokhususatas').html(data); }
+     });
+});
+
+
+document.addEventListener("deviceready", myFunctionganalytic);
+function myFunctionganalytic() {
+  window.analytics.startTrackerWithId('UA-76029292-1');
+  window.analytics.trackView('Home APP - Kunci Gitar Indo');
+};
+
+$(document).ready(function() {
+$('#buttonsearchzz').click(function() {
+$('#buttonsearchzz').hide();
+$('#buttonsearchzzwait').show();
+
+var urloooo = "js/dbkunci.js";
+$.getScript( urloooo, function() {
+	$( "#search" ).autocomplete(
+	{
+		source:data,
+maxResults:100,
+     minLength:3,
+		select: function( event, ui ) {
+			$( "#search" ).val( ui.item.label + " / " + ui.item.id );
+			return false;
+		}
+	}).data( "autocomplete" )._renderItem = function( ul, item ) { 
+		return $( "<li></li>" )
+			.data( "item.autocomplete", item )
+			.append( "<a href ='chord.html#" + item.id + "' onClick='window.location = \"chord.html#" + item.id + "\";location.reload();' ><strong>" + item.label + "</strong></a>" )
+			.appendTo("ul");
+		};		
+$('#buttonsearchzzwait').hide('slow');
+$('#formsearch').show('slow');
+});
+		
+document.getElementById("search").placeholder = "Search Songs...";
+		});
+});
+
+</script>
+</head>
+<body> 
+<div id="box-loadload"><center><br><br><br><br><img style="width:200px" src="loading.gif"></img></center></div>
+
+
+
+<!-----rumus cari baru----->
+
+<!-----rumus cari baru----->
+
+
+<div style="clear:both" id="promokhususatas"></div>
+<div id="topfive" style="clear:both"></div>
+
+<h1>Tentukan Chord Lagu Berdasarkan Abjad Band/Vokalis</h1>
+<a href="band.html#2"><h4>Band Directory - A</h4></a>
+<a href="band.html#3"><h4>Band Directory - B</h4></a>
+<a href="band.html#4"><h4>Band Directory - C</h4></a>
+<a href="band.html#5"><h4>Band Directory - D</h4></a>
+<a href="band.html#6"><h4>Band Directory - E</h4></a>
+<a href="band.html#7"><h4>Band Directory - F</h4></a>
+<a href="band.html#8"><h4>Band Directory - G</h4></a>
+<a href="band.html#9"><h4>Band Directory - H</h4></a>
+<a href="band.html#10"><h4>Band Directory - I</h4></a>
+<a href="band.html#11"><h4>Band Directory - J</h4></a>
+<a href="band.html#12"><h4>Band Directory - K</h4></a>
+<a href="band.html#13"><h4>Band Directory - L</h4></a>
+<a href="band.html#14"><h4>Band Directory - M</h4></a>
+<a href="band.html#15"><h4>Band Directory - N</h4></a>
+<a href="band.html#16"><h4>Band Directory - O</h4></a>
+<a href="band.html#17"><h4>Band Directory - P</h4></a>
+<a href="band.html#18"><h4>Band Directory - Q</h4></a>
+<a href="band.html#19"><h4>Band Directory - R</h4></a>
+<a href="band.html#20"><h4>Band Directory - S</h4></a>
+<a href="band.html#21"><h4>Band Directory - T</h4></a>
+<a href="band.html#22"><h4>Band Directory - U</h4></a>
+<a href="band.html#23"><h4>Band Directory - V</h4></a>
+<a href="band.html#24"><h4>Band Directory - W</h4></a>
+<a href="band.html#25"><h4>Band Directory - X</h4></a>
+<a href="band.html#26"><h4>Band Directory - Y</h4></a>
+<a href="band.html#27"><h4>Band Directory - Z</h4></a>
+	<br><br><br><br><br><br><br>
+
+</body>
+</html>

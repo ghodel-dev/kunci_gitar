@@ -1,0 +1,48 @@
+<!DOCTYPE html> <html> <head> 
+<script>
+var idchord = window.location.hash.substr(1);
+var pecahdb = 100;
+var pecahdb2 = pecahdb; 
+for (pecahdb1 = 0; pecahdb1 < idchord;pecahdb1 = pecahdb1+pecahdb ) 
+{ pecahdb2 = pecahdb1+pecahdb; pecahdb0 = pecahdb2-pecahdb;    }
+var linkjschordmini = ''+pecahdb0+'-'+pecahdb1+'';
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />  <script src="cordova.js"></script> <script src="js/app.js"></script> <script src="xdk/init-dev.js"></script>
+
+<script type="text/javascript" src="js/head.min.js"></script>
+<script>
+head.load("css/style.css");
+//head.load("js/dbkunci.js");
+head.load("js/komplit.js");
+head.load("js/chord.js");
+head.load("js/db/chord"+linkjschordmini+".js");
+head.load("js/loadchord.js");
+head.load("js/neon.js");
+
+</script>
+</head> 
+
+<body>  
+<div id="box-loadload"><center><br><br><br><br><img style="width:200px" src="loading.gif"></img></center></div>
+
+
+
+<div class="zoominout"> <span onclick="myFunctionbookmarkya()" id="bookmarkya" style="font-size:40px;color:silver"><img id="bm2" style="width:32px;display:none" src="bm2.png"></span><br><br><img style="cursor:pointer;" id="plustext" alt="Increase text size" src="zoom_in.png" onclick="resizeText(1)" /><br><br><img style="cursor:pointer" id="minustext" alt="Decrease text size" src="zoom_out.png" onclick="resizeText(-1)" /> </div> <div class="exitexit"> <a id="support" href="#"><h4 class="tombolkananbawah" onclick="exitFromApp()"> EXIT! </h4></a></div> 
+
+
+<div class="header"><h3 id="judulatasjalan"></h3></div> 
+
+<!-----rumus cari baru----->
+
+<table align="center" style="clear:both"><tr>
+<td style="font-size:18px;color:silver">Sesuaikan Tinggi Chord</td>
+<td>
+<input style="color:white;background-color:silver;width:100px" id="transposeDown" type="button" value="Down" /></td><td>
+<input style="color:white;background-color:silver;width:100px" id="transposeUp" type="button" value="Up" /></td></tr></table><div style="clear:both"></div>
+
+<p id="stage"></p>
+
+<div id="showchord"></div>
+
+<div style="clear:both" id="promokhususbawah"></div> <br><br><br><br><br><br><br><br><br><br> <div id="endchord"></div> </body> </html>

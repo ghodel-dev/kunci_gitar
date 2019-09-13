@@ -1,0 +1,33 @@
+<!DOCTYPE html> <html> <head> 
+<script>
+var totalhash = window.location.hash.substr(1);
+var okehash = totalhash.split("#");
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" /> <script src="cordova.js"></script> <script src="js/app.js"></script> <script src="xdk/init-dev.js"></script> 
+
+
+<script type="text/javascript" src="js/head.min.js"></script>
+<script>
+head.load("css/style.css");
+//head.load("js/dbkunci.js");
+head.load("js/komplit.js");
+head.load("js/list.js");
+head.load("js/dbalbumlist/albumlist-"+okehash[0]+".js");
+head.load("js/loadalbumlist.js");
+head.load("js/neon.js");
+
+</script>
+
+</head> <body> 
+<div id="box-loadload"><center><br><br><br><br><img style="width:200px" src="loading.gif"></img></center></div>
+
+
+<div class="homehome"> <a id="support" href="index.html"><span class="first"> Home </span></a></div>  <div class="header"><h3 id="judulatasjalan"></h3></div> 
+
+<!-----rumus cari baru----->
+<div style="clear:both" id="azlistatas"></div>
+
+<div id="hasillist"></div>
+
+
+<br><br><br><br><br><br><br> </body> </html>
