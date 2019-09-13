@@ -1,0 +1,56 @@
+<div style="clear:both;color:white;font-size:18px;text-align:center;background-color:#804d00;padding:10px;font-weight:bold;margin-left:5px;margin-right:5px;margin-bottom:5px;margin-top:15px;" id="cdisqusshow">Leave/View Comments</div>
+<div style="clear:both;color:white;font-size:18px;text-align:center;background-color:#336600;display:none;padding:10px;font-weight:bold;margin-left:5px;margin-right:5px;margin-bottom:5px;margin-top:15px;" id="cdisqushide">Hide Comments</div>
+
+<div style="display:none;clear:both;" id="disqus_thread">
+<iframe target="_parent" id="MyFrameuserchatroomon" name="MyFrameuserchatroomon" width="100%" height="400px" frameBorder="0"></iframe>
+</div>
+
+<script>
+$(document).ready(function(){
+
+$("#cdisqusshow").click(function() {
+		$("#disqus_thread").show("slow");
+		$("#cdisqusshow").hide("slow");
+		$("#cdisqushide").show("slow");
+var newSrc = "http://kuncilagu.exe.bz/disqus.php?id="+idchord+"";
+document.getElementById("MyFrameuserchatroomon").src=newSrc;
+	});
+$("#cdisqushide").click(function() {
+		$("#disqus_thread").hide("slow");
+		$("#cdisqushide").hide("slow");
+		$("#cdisqusshow").show("slow");
+var newSrc = "";
+document.getElementById("MyFrameuserchatroomon").src=newSrc;
+	}); 
+ 
+  
+  
+});
+</script>
+
+<script>
+$(document).ready(function(){
+var dtnow = new Date();
+var tmnow = dtnow.getTime();
+var tmnext = dtnow.getTime()+(1800000*1);
+if (!sessionStorage.getItem("logOnceTime") || sessionStorage.getItem("logOnceTime") < tmnow) 
+{
+
+sessionStorage.setItem("logOnceTime", tmnext); 
+var request_uri = "http://kuncilagu.exe.bz/indo/android_asset/www/kunci-"+idchord+".html";$.get(request_uri, function(data) {$("#logvisitor").html(data);});
+}});
+</script>
+
+<script>$(document).ready(function(){ 
+var admobid = {};
+if( /(android)/i.test(navigator.userAgent) ) 
+{ admobid = { banner: 'ca-app-pub-6516367932506481/2416247460', interstitial: 'ca-app-pub-6516367932506481/7643208669' };} 
+else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) 
+{ admobid = { banner:'ca-app-pub-6516367932506481/5939919061', interstitial:'ca-app-pub-6516367932506481/5800318264' };} 
+else 
+{ admobid = { banner:'', interstitial:'' };}
+
+if((/(android|ipad|iphone|ipod)/i.test(navigator.userAgent))){document.addEventListener('deviceready', initApp, false);} else { initApp(); }
+function initApp() {
+AdMob.createBanner( {adId: admobid.banner,isTesting: false,overlap: false,offsetTopBar: false,position: AdMob.AD_POSITION.TOP_CENTER,bgColor: 'black'} );
+}});</script>
